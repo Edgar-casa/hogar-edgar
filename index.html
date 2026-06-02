@@ -18,27 +18,54 @@
   .avatar-btn:hover { border-color: #ccc; background: #fafafa; }
   .avatar-circle { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 600; margin: 0 auto 10px; }
   .avatar-name { font-size: 15px; font-weight: 500; }
-  .avatar-role { font-size: 12px; color: #999; margin-top: 2px; }
   .avatar-count { font-size: 12px; color: #aaa; margin-top: 6px; }
   .top-bar { display: flex; align-items: center; gap: 10px; padding: 20px 0 16px; }
   .back-btn { background: none; border: 1px solid #e5e5e5; border-radius: 8px; padding: 6px 12px; cursor: pointer; font-size: 13px; color: #666; }
-  .user-pill { display: flex; align-items: center; gap: 6px; margin-left: auto; background: #f0f0ec; padding: 5px 12px 5px 5px; border-radius: 20px; }
+  .user-pill { display: flex; align-items: center; gap: 6px; margin-left: auto; background: #f0f0ec; padding: 5px 12px 5px 5px; border-radius: 20px; cursor: pointer; }
   .user-dot { width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 600; }
   .tabs { display: flex; border-bottom: 1px solid #e5e5e5; margin-bottom: 20px; }
   .tab { padding: 10px 16px; font-size: 14px; cursor: pointer; border-bottom: 2px solid transparent; color: #888; background: none; border-top: none; border-left: none; border-right: none; margin-bottom: -1px; }
   .tab.active { color: #1a1a1a; border-bottom-color: #1a1a1a; font-weight: 500; }
-  .add-form { background: #fff; border: 1px solid #e5e5e5; border-radius: 14px; padding: 14px; margin-bottom: 20px; }
-  .add-form input, .add-form select { width: 100%; padding: 9px 12px; border: 1px solid #e5e5e5; border-radius: 8px; font-size: 14px; margin-bottom: 8px; background: #fafafa; color: #1a1a1a; }
-  .add-form-row { display: flex; gap: 8px; }
-  .add-form-row select { flex: 1; margin-bottom: 0; }
+
+  .quick-tasks { margin-bottom: 16px; }
+  .quick-title { font-size: 11px; font-weight: 600; color: #aaa; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+  .quick-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .quick-btn { background: #fff; border: 1px solid #e5e5e5; border-radius: 10px; padding: 10px 12px; cursor: pointer; text-align: left; font-size: 13px; color: #1a1a1a; display: flex; align-items: center; gap: 8px; transition: all 0.12s; }
+  .quick-btn:hover { border-color: #ccc; background: #fafafa; }
+  .quick-btn.comprar { border-color: #B5D4F4; background: #E6F1FB; color: #0C447C; }
+  .quick-icon { font-size: 16px; }
+
+  .custom-form { background: #fff; border: 1px solid #e5e5e5; border-radius: 14px; padding: 14px; margin-bottom: 16px; }
+  .custom-title { font-size: 11px; font-weight: 600; color: #aaa; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+  .custom-form input, .custom-form select { width: 100%; padding: 9px 12px; border: 1px solid #e5e5e5; border-radius: 8px; font-size: 14px; margin-bottom: 8px; background: #fafafa; color: #1a1a1a; }
+  .form-row { display: flex; gap: 8px; }
+  .form-row select { flex: 1; margin-bottom: 0; }
   .add-btn { padding: 9px 18px; background: #1a1a1a; color: #fff; border: none; border-radius: 8px; font-size: 14px; cursor: pointer; white-space: nowrap; }
   .add-btn:hover { background: #333; }
+
+  .assign-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; align-items: center; }
+  .assign-label { font-size: 12px; color: #888; }
+  .assign-pill { padding: 4px 10px; border-radius: 20px; font-size: 12px; cursor: pointer; border: 1px solid #e5e5e5; background: #fff; color: #888; transition: all 0.12s; }
+  .assign-pill.active { font-weight: 500; border-color: transparent; }
+
+  .modal-bg { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4); z-index: 100; align-items: flex-end; }
+  .modal-bg.open { display: flex; }
+  .modal { background: #fff; border-radius: 20px 20px 0 0; padding: 24px 20px 40px; width: 100%; }
+  .modal h3 { font-size: 17px; font-weight: 600; margin-bottom: 16px; }
+  .modal input { width: 100%; padding: 10px 14px; border: 1px solid #e5e5e5; border-radius: 10px; font-size: 15px; margin-bottom: 12px; }
+  .modal-assign { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
+  .modal-actions { display: flex; gap: 8px; }
+  .modal-actions button { flex: 1; padding: 12px; border-radius: 10px; font-size: 15px; cursor: pointer; }
+  .btn-cancel { background: #f0f0ec; border: none; color: #666; }
+  .btn-add { background: #1a1a1a; border: none; color: #fff; font-weight: 500; }
+
   .filters { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
   .filter-pill { padding: 5px 12px; border-radius: 20px; font-size: 12px; cursor: pointer; border: 1px solid #e5e5e5; background: #fff; color: #888; }
   .filter-pill.active { font-weight: 500; border-color: transparent; }
   .section-title { font-size: 11px; font-weight: 600; color: #aaa; text-transform: uppercase; letter-spacing: 0.05em; margin: 16px 0 8px; }
   .task-item { display: flex; align-items: flex-start; gap: 10px; padding: 12px; background: #fff; border: 1px solid #e5e5e5; border-radius: 10px; margin-bottom: 6px; }
-  .task-item.done { opacity: 0.5; }
+  .task-item.done { opacity: 0.45; }
+  .task-item.mine { border-left: 3px solid #1a1a1a; }
   .check-btn { width: 22px; height: 22px; border-radius: 50%; border: 2px solid #ddd; background: none; cursor: pointer; flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
   .task-body { flex: 1; min-width: 0; }
   .task-name { font-size: 14px; }
@@ -48,6 +75,7 @@
   .badge-alta { background: #FCEBEB; color: #A32D2D; }
   .badge-normal { background: #E1F5EE; color: #0F6E56; }
   .badge-recur { background: #EEEDFE; color: #534AB7; }
+  .badge-assigned { background: #f0f0ec; color: #555; }
   .task-del { background: none; border: none; cursor: pointer; color: #ccc; font-size: 18px; padding: 0; flex-shrink: 0; line-height: 1; }
   .task-del:hover { color: #e24b4a; }
   .empty-state { text-align: center; padding: 3rem 1rem; color: #aaa; font-size: 14px; }
@@ -69,6 +97,7 @@
   .sync-indicator { font-size: 11px; color: #aaa; text-align: right; margin-bottom: 8px; }
   .sync-indicator.syncing { color: #BA7517; }
   .sync-indicator.ok { color: #0F6E56; }
+  .change-user { font-size: 12px; color: #aaa; text-align: center; margin-top: 8px; cursor: pointer; text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -77,15 +106,13 @@
 <div id="screenHome" class="screen active">
   <h1>Hola, ¿quién eres?</h1>
   <p class="subtitle">Selecciona tu perfil para gestionar las tareas del hogar.</p>
-  <div class="avatar-grid" id="avatarGrid">
-    <div class="loading">Cargando...</div>
-  </div>
+  <div class="avatar-grid" id="avatarGrid"><div class="loading">Cargando...</div></div>
 </div>
 
 <div id="screenMain" class="screen">
   <div class="top-bar">
-    <button class="back-btn" onclick="goHome()">← Salir</button>
-    <div class="user-pill">
+    <div style="font-size:20px;font-weight:600;color:#1a1a1a">Hogar Edgar</div>
+    <div class="user-pill" onclick="changeUser()">
       <div class="user-dot" id="userDot"></div>
       <span style="font-size:13px;font-weight:500" id="userName"></span>
     </div>
@@ -105,15 +132,24 @@
   </div>
 
   <div id="tab-tareas">
-    <div class="add-form">
-      <input type="text" id="newTaskName" placeholder="Nueva tarea... ej. Poner lavadora" onkeydown="if(event.key==='Enter')addTask()">
-      <div class="add-form-row">
-        <select id="newTaskCat">
-          <option value="cocina">Cocina</option>
-          <option value="limpieza">Limpieza</option>
-          <option value="compras">Compras</option>
-          <option value="otros">Otros</option>
-        </select>
+    <div class="quick-tasks">
+      <div class="quick-title">Añadir tarea rápida</div>
+      <div class="assign-row">
+        <span class="assign-label">Para:</span>
+        <span class="assign-pill active" id="apill-0" onclick="setAssign(0)">Todos</span>
+        <span class="assign-pill" id="apill-1" onclick="setAssign(1)">Edgar</span>
+        <span class="assign-pill" id="apill-2" onclick="setAssign(2)">Eva</span>
+        <span class="assign-pill" id="apill-3" onclick="setAssign(3)">Martina</span>
+        <span class="assign-pill" id="apill-4" onclick="setAssign(4)">Mojito</span>
+        <span class="assign-pill" id="apill-5" onclick="setAssign(5)">Alex</span>
+      </div>
+      <div class="quick-grid" id="quickGrid"></div>
+    </div>
+
+    <div class="custom-form">
+      <div class="custom-title">Otra tarea</div>
+      <input type="text" id="newTaskName" placeholder="Escribe la tarea..." onkeydown="if(event.key==='Enter')addCustomTask()">
+      <div class="form-row">
         <select id="newTaskPrio">
           <option value="normal">Normal</option>
           <option value="alta">Urgente</option>
@@ -122,11 +158,11 @@
           <option value="">Sin repetición</option>
           <option value="diaria">Diaria</option>
           <option value="semanal">Semanal</option>
-          <option value="mensual">Mensual</option>
         </select>
-        <button class="add-btn" onclick="addTask()">+</button>
+        <button class="add-btn" onclick="addCustomTask()">+</button>
       </div>
     </div>
+
     <div class="filters" id="catFilters"></div>
     <div id="taskList"><div class="loading">Cargando tareas...</div></div>
   </div>
@@ -137,14 +173,24 @@
 
   <div id="tab-estadisticas" style="display:none">
     <div class="stats-grid" id="statsCards"></div>
-    <div class="section-title">Por categoría</div>
-    <div id="catStats"></div>
-    <div class="section-title" style="margin-top:1rem">Por miembro</div>
+    <div class="section-title">Por miembro</div>
     <div id="memberStats"></div>
   </div>
 </div>
 
 </div>
+
+<div class="modal-bg" id="compraModal">
+  <div class="modal">
+    <h3>¿Qué hay que comprar?</h3>
+    <input type="text" id="compraInput" placeholder="ej. Leche, pan, zumo..." onkeydown="if(event.key==='Enter')addCompra()">
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeModal()">Cancelar</button>
+      <button class="btn-add" onclick="addCompra()">Añadir</button>
+    </div>
+  </div>
+</div>
+
 <script>
 const SUPABASE_URL = 'https://dyxqumifxsvrxorenpxl.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_zQlpWBa7BoMSKr7R_h3CHw_Z4v4F6RM';
@@ -158,6 +204,20 @@ const MEMBERS = [
   {id:5,name:'Alex',colorBg:'#FAEEDA',color:'#854F0B'}
 ];
 
+const QUICK_TASKS = [
+  {name:'Tender ropa', cat:'limpieza', icon:'👕'},
+  {name:'Poner lavadora', cat:'limpieza', icon:'🫧'},
+  {name:'Poner secadora', cat:'limpieza', icon:'🌀'},
+  {name:'Poner lavavajillas', cat:'cocina', icon:'🍽️'},
+  {name:'Vaciar lavavajillas', cat:'cocina', icon:'✨'},
+  {name:'Sacar basura', cat:'otros', icon:'🗑️'},
+  {name:'Pasar aspirador', cat:'limpieza', icon:'🧹'},
+  {name:'Fregar suelo', cat:'limpieza', icon:'🪣'},
+  {name:'Hacer cama', cat:'otros', icon:'🛏️'},
+  {name:'Limpiar baño', cat:'limpieza', icon:'🚿'},
+  {name:'Comprar...', cat:'compras', icon:'🛒', special:'compra'},
+];
+
 const CAT = {
   cocina:{label:'Cocina',bg:'#FAEEDA',color:'#633806'},
   limpieza:{label:'Limpieza',bg:'#E1F5EE',color:'#085041'},
@@ -169,7 +229,7 @@ let currentMember = null;
 let tasks = [];
 let history = [];
 let activeFilter = 'todas';
-let activeTab = 'tareas';
+let selectedAssign = 0;
 let channel = null;
 
 function getMember(id){ return MEMBERS.find(m=>m.id===id); }
@@ -186,7 +246,70 @@ function setSyncStatus(status){
   const el = document.getElementById('syncIndicator');
   if(status==='syncing'){ el.textContent='Sincronizando...'; el.className='sync-indicator syncing'; }
   else if(status==='ok'){ el.textContent='Sincronizado'; el.className='sync-indicator ok'; setTimeout(()=>{ el.className='sync-indicator'; },2000); }
-  else { el.textContent='Sin conexión'; el.className='sync-indicator'; }
+}
+
+function setAssign(id){
+  selectedAssign = id;
+  for(let i=0;i<=5;i++){
+    const el = document.getElementById('apill-'+i);
+    if(!el) continue;
+    el.classList.remove('active');
+    el.style.background='';el.style.color='';el.style.borderColor='';
+  }
+  const el = document.getElementById('apill-'+id);
+  el.classList.add('active');
+  if(id>0){
+    const m=getMember(id);
+    el.style.background=m.colorBg;el.style.color=m.color;el.style.borderColor='transparent';
+  } else {
+    el.style.background='#e5e5e5';el.style.color='#555';el.style.borderColor='transparent';
+  }
+}
+
+function renderQuickGrid(){
+  const grid = document.getElementById('quickGrid');
+  grid.innerHTML = QUICK_TASKS.map(t=>{
+    const isCompra = t.special==='compra';
+    return `<button class="quick-btn${isCompra?' comprar':''}" onclick="${isCompra?'openCompraModal()':'quickAdd(\''+t.name+'\',\''+t.cat+'\')'}">
+      <span class="quick-icon">${t.icon}</span>${t.name}
+    </button>`;
+  }).join('');
+}
+
+function openCompraModal(){
+  document.getElementById('compraModal').classList.add('open');
+  setTimeout(()=>document.getElementById('compraInput').focus(),100);
+}
+function closeModal(){ document.getElementById('compraModal').classList.remove('open'); document.getElementById('compraInput').value=''; }
+
+async function addCompra(){
+  const what = document.getElementById('compraInput').value.trim();
+  if(!what) return;
+  closeModal();
+  await addTaskToDB('Comprar: '+what, 'compras', 'normal', '');
+}
+
+async function quickAdd(name, cat){
+  await addTaskToDB(name, cat, 'normal', '');
+}
+
+async function addCustomTask(){
+  const name = document.getElementById('newTaskName').value.trim();
+  if(!name) return;
+  const prio = document.getElementById('newTaskPrio').value;
+  const recur = document.getElementById('newTaskRecur').value;
+  await addTaskToDB(name, 'otros', prio, recur);
+  document.getElementById('newTaskName').value='';
+}
+
+async function addTaskToDB(name, cat, prio, recur){
+  setSyncStatus('syncing');
+  const {error} = await sb.from('tasks').insert({
+    name, cat, prio, recur, done:false,
+    added_by: currentMember,
+    assigned_to: selectedAssign
+  });
+  if(!error){ setSyncStatus('ok'); await loadTasks(); }
 }
 
 async function loadTasks(){
@@ -200,23 +323,6 @@ async function loadHistory(){
   const {data,error} = await sb.from('history').select('*').order('done_at',{ascending:false}).limit(50);
   if(!error) history = data || [];
   renderHistory();
-}
-
-async function loadStats(){
-  await loadHistory();
-  renderStats();
-}
-
-async function addTask(){
-  const name = document.getElementById('newTaskName').value.trim();
-  if(!name) return;
-  const cat = document.getElementById('newTaskCat').value;
-  const prio = document.getElementById('newTaskPrio').value;
-  const recur = document.getElementById('newTaskRecur').value;
-  setSyncStatus('syncing');
-  const {error} = await sb.from('tasks').insert({name,cat,prio,recur,done:false,added_by:currentMember});
-  if(!error){ document.getElementById('newTaskName').value=''; setSyncStatus('ok'); await loadTasks(); }
-  else setSyncStatus('error');
 }
 
 async function completeTask(id){
@@ -249,7 +355,7 @@ async function deleteTask(id){
 
 function subscribeRealtime(){
   if(channel) sb.removeChannel(channel);
-  channel = sb.channel('tasks-changes')
+  channel = sb.channel('tasks-ch')
     .on('postgres_changes',{event:'*',schema:'public',table:'tasks'},()=>{ loadTasks(); })
     .subscribe();
 }
@@ -270,8 +376,9 @@ async function renderHome(){
   });
 }
 
-function enterAs(id){
+function enterAs(id, skipSave){
   currentMember = id;
+  if(!skipSave) localStorage.setItem('hogar_member', id);
   const m = getMember(id);
   const dot = document.getElementById('userDot');
   dot.style.background = m.colorBg; dot.style.color = m.color;
@@ -279,11 +386,14 @@ function enterAs(id){
   document.getElementById('userName').textContent = m.name;
   document.getElementById('screenHome').classList.remove('active');
   document.getElementById('screenMain').classList.add('active');
+  renderQuickGrid();
+  setAssign(0);
   subscribeRealtime();
   switchTab('tareas', document.querySelector('.tab'));
 }
 
-function goHome(){
+function changeUser(){
+  localStorage.removeItem('hogar_member');
   if(channel){ sb.removeChannel(channel); channel=null; }
   currentMember=null;
   document.getElementById('screenMain').classList.remove('active');
@@ -297,7 +407,6 @@ function switchTab(name,el){
   ['tareas','historial','estadisticas'].forEach(t=>{
     document.getElementById('tab-'+t).style.display = t===name?'block':'none';
   });
-  activeTab=name;
   if(name==='tareas') loadTasks();
   if(name==='historial') loadHistory();
   if(name==='estadisticas') loadStats();
@@ -305,9 +414,13 @@ function switchTab(name,el){
 
 function checkReminders(){
   const alta = tasks.filter(t=>!t.done && t.prio==='alta');
+  const myTasks = tasks.filter(t=>!t.done && (t.assigned_to===currentMember));
   const banner = document.getElementById('reminderBanner');
   if(alta.length>0){
-    document.getElementById('reminderText').textContent=`Tienes ${alta.length} tarea${alta.length>1?'s':''} urgente${alta.length>1?'s':''}: "${alta[0].name}"${alta.length>1?' y más...':''}`;
+    document.getElementById('reminderText').textContent=`${alta.length} tarea${alta.length>1?'s':''} urgente${alta.length>1?'s':''}: "${alta[0].name}"`;
+    banner.style.display='flex';
+  } else if(myTasks.length>0){
+    document.getElementById('reminderText').textContent=`Tienes ${myTasks.length} tarea${myTasks.length>1?'s':''} asignada${myTasks.length>1?'s':''} a ti.`;
     banner.style.display='flex';
   } else banner.style.display='none';
 }
@@ -323,31 +436,37 @@ function renderFilters(){
   }).join('');
 }
 
+function assignedLabel(assigned_to){
+  if(!assigned_to || assigned_to===0) return 'Todos';
+  const m = getMember(assigned_to);
+  return m ? m.name : 'Todos';
+}
+
 function renderTasks(){
   renderFilters();
   const f=activeFilter;
   const filtered=tasks.filter(t=>f==='todas'||t.cat===f);
-  const pending=filtered.filter(t=>!t.done);
+  const myFiltered = filtered.filter(t=>!t.done && (t.assigned_to===0||t.assigned_to===null||t.assigned_to===currentMember));
+  const othersFiltered = filtered.filter(t=>!t.done && t.assigned_to!==0 && t.assigned_to!==null && t.assigned_to!==currentMember);
   const done=filtered.filter(t=>t.done);
-  const alta=pending.filter(t=>t.prio==='alta');
-  const normal=pending.filter(t=>t.prio==='normal');
 
-  function taskHTML(t){
-    const adder=getMember(t.added_by);
+  function taskHTML(t, ismine){
     const doer=t.done_by?getMember(t.done_by):null;
     const cat=CAT[t.cat]||CAT.otros;
-    const recurLabel={diaria:'Diaria',semanal:'Semanal',mensual:'Mensual'};
+    const recurLabel={diaria:'Diaria',semanal:'Semanal'};
     const checkStyle=t.done&&doer?`background:${doer.colorBg};border-color:${doer.color}`:'';
     const checkContent=t.done&&doer?`<svg width="10" height="10" viewBox="0 0 10 10"><path d="M1.5 5L4 7.5L8.5 2.5" stroke="${doer.color}" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>`:'';
-    return `<div class="task-item${t.done?' done':''}">
+    const assignedTo = t.assigned_to && t.assigned_to!==0 ? getMember(t.assigned_to) : null;
+    return `<div class="task-item${t.done?' done':''}${ismine?' mine':''}">
       <button class="check-btn" style="${checkStyle}" onclick="${t.done?'uncompleteTask':'completeTask'}(${t.id})">${checkContent}</button>
       <div class="task-body">
         <div class="task-name${t.done?' done':''}">${t.name}</div>
         <div class="task-meta">
           <span class="badge" style="background:${cat.bg};color:${cat.color}">${cat.label}</span>
-          <span class="badge ${t.prio==='alta'?'badge-alta':'badge-normal'}">${t.prio==='alta'?'Urgente':'Normal'}</span>
+          ${t.prio==='alta'?'<span class="badge badge-alta">Urgente</span>':''}
           ${t.recur?`<span class="badge badge-recur">${recurLabel[t.recur]||t.recur}</span>`:''}
-          <span style="font-size:11px;color:#aaa">${t.done&&doer?'Hecho por '+doer.name+' · '+timeAgo(t.done_at):'Añadido por '+(adder?adder.name:'?')}</span>
+          ${assignedTo?`<span class="badge badge-assigned" style="background:${assignedTo.colorBg};color:${assignedTo.color}">Para ${assignedTo.name}</span>`:'<span class="badge badge-assigned">Para todos</span>'}
+          ${t.done&&doer?`<span style="font-size:11px;color:#aaa">Hecho por ${doer.name} · ${timeAgo(t.done_at)}</span>`:''}
         </div>
       </div>
       ${!t.done?`<button class="task-del" onclick="deleteTask(${t.id})">×</button>`:''}
@@ -355,10 +474,10 @@ function renderTasks(){
   }
 
   let html='';
-  if(alta.length){ html+=`<div class="section-title">Urgentes (${alta.length})</div>`; alta.forEach(t=>{html+=taskHTML(t);}); }
-  if(normal.length){ html+=`<div class="section-title">Pendientes (${normal.length})</div>`; normal.forEach(t=>{html+=taskHTML(t);}); }
-  if(done.length){ html+=`<div class="section-title" style="margin-top:1rem">Completadas (${done.length})</div>`; done.forEach(t=>{html+=taskHTML(t);}); }
-  if(!pending.length&&!done.length) html='<div class="empty-state">No hay tareas en esta categoría.</div>';
+  if(myFiltered.length){ html+=`<div class="section-title">Para mí / todos (${myFiltered.length})</div>`; myFiltered.forEach(t=>{html+=taskHTML(t,true);}); }
+  if(othersFiltered.length){ html+=`<div class="section-title">Para otros (${othersFiltered.length})</div>`; othersFiltered.forEach(t=>{html+=taskHTML(t,false);}); }
+  if(done.length){ html+=`<div class="section-title" style="margin-top:1rem">Completadas (${done.length})</div>`; done.forEach(t=>{html+=taskHTML(t,false);}); }
+  if(!myFiltered.length&&!othersFiltered.length&&!done.length) html='<div class="empty-state">No hay tareas. Añade una arriba.</div>';
   document.getElementById('taskList').innerHTML=html;
 }
 
@@ -369,10 +488,15 @@ function renderHistory(){
     const cat=CAT[h.cat]||CAT.otros;
     return `<div class="history-item">
       <div class="history-dot" style="background:${m?m.color:'#aaa'}"></div>
-      <div class="history-text"><strong>${m?m.name:'?'}</strong> completó "${h.task_name}" <span class="badge" style="background:${cat.bg};color:${cat.color};font-size:10px">${cat.label}</span></div>
+      <div class="history-text"><strong>${m?m.name:'?'}</strong> completó "${h.task_name}"</div>
       <div class="history-time">${timeAgo(h.done_at)}</div>
     </div>`;
   }).join('');
+}
+
+async function loadStats(){
+  await loadHistory();
+  renderStats();
 }
 
 function renderStats(){
@@ -382,19 +506,6 @@ function renderStats(){
     <div class="stat-card"><div class="stat-label">Total</div><div class="stat-value">${total}</div></div>
     <div class="stat-card"><div class="stat-label">Completadas</div><div class="stat-value" style="color:#0F6E56">${done}</div></div>
     <div class="stat-card"><div class="stat-label">Pendientes</div><div class="stat-value">${total-done}</div></div>`;
-
-  const catCount={};
-  Object.keys(CAT).forEach(c=>catCount[c]=history.filter(h=>h.cat===c).length);
-  const maxC=Math.max(...Object.values(catCount),1);
-  document.getElementById('catStats').innerHTML=Object.entries(CAT).map(([k,v])=>{
-    const pct=Math.round((catCount[k]/maxC)*100);
-    return `<div class="bar-row">
-      <span class="badge" style="background:${v.bg};color:${v.color};min-width:65px;text-align:center">${v.label}</span>
-      <div class="bar-wrap"><div class="bar-fill" style="width:${pct}%;background:${v.color}"></div></div>
-      <span style="font-size:12px;color:#aaa;min-width:20px;text-align:right">${catCount[k]}</span>
-    </div>`;
-  }).join('');
-
   const mCount={};
   MEMBERS.forEach(m=>mCount[m.id]=history.filter(h=>h.member_id===m.id).length);
   const maxM=Math.max(...Object.values(mCount),1);
@@ -409,7 +520,13 @@ function renderStats(){
   }).join('');
 }
 
-renderHome();
+const saved = localStorage.getItem('hogar_member');
+if(saved){
+  const id = parseInt(saved);
+  if(MEMBERS.find(m=>m.id===id)){
+    renderHome().then(()=>{ enterAs(id, true); });
+  } else { renderHome(); }
+} else { renderHome(); }
 </script>
 </body>
 </html>
